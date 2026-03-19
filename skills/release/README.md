@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # Skill: `release`
 
 Guides you through creating a new versioned release: CHANGELOG update, version bump, documentation sync, tests, optional build, git tag, and GitHub Release — all in one flow.

@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # Skill: `review-spec`
 
 Reads your `SPEC.md` and interviews you about it — technical implementation, UI/UX decisions, tradeoffs, and improvements. Updates the spec with your answers.

@@ -1,8 +1,21 @@
+
 # GitHub Copilot Setup Guide
 
 GitHub Copilot reads repository-scoped instructions from a dedicated markdown file. It also supports custom prompt files that can be invoked as slash commands in Copilot Chat.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Project context file: `copilot-instructions.md`](#project-context-file-copilot-instructionsmd)
+- [Prompt files (custom slash commands)](#prompt-files-custom-slash-commands)
+- [Available skills](#available-skills)
+- [Tips](#tips)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Project context file: `copilot-instructions.md`
 

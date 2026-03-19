@@ -1,3 +1,4 @@
+
 # ai-templates
 
 > A public collection of reusable skills, templates, and guides for setting up AI coding agents on new or existing projects.
@@ -6,6 +7,33 @@ This file is the shared AI context for this project. It is read by all AI coding
 Agent-specific behaviour rules live in each agent's own file (CLAUDE.md, AGENTS.md, etc.).
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [What this project is](#what-this-project-is)
+- [Structure](#structure)
+- [Key concepts](#key-concepts)
+  - [Skills](#skills)
+  - [Shared context pattern](#shared-context-pattern)
+  - [Examples](#examples)
+- [Contributing](#contributing)
+- [What this repo does NOT do](#what-this-repo-does-not-do)
+- [Git conventions](#git-conventions)
+- [Behaviour rules (apply to all agents)](#behaviour-rules-apply-to-all-agents)
+  - [This is a docs-only repo](#this-is-a-docs-only-repo)
+  - [Keep tables of contents up to date](#keep-tables-of-contents-up-to-date)
+  - [Keep the shared context pattern consistent](#keep-the-shared-context-pattern-consistent)
+  - [Ask before destructive actions](#ask-before-destructive-actions)
+  - [Keep responses concise](#keep-responses-concise)
+- [Closing the loop (always follow these)](#closing-the-loop-always-follow-these)
+  - [After adding a skill or agent](#after-adding-a-skill-or-agent)
+  - [After any session that changes the repo shape](#after-any-session-that-changes-the-repo-shape)
+  - [When something in a context file turns out to be wrong](#when-something-in-a-context-file-turns-out-to-be-wrong)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## What this project is
 
@@ -89,9 +117,10 @@ Organized by technology category (`arcgis-maps-sdk-js/`, future: `calcite-design
 
 ## What this repo does NOT do
 
-- No npm install, no build, no CI
+- No build, no CI, no tests
 - No agent-specific tooling in the repo itself — just documentation
 - Examples are illustrative, not runnable projects
+- The only `npm` dependency is `doctoc` (dev), used to maintain tables of contents
 
 ---
 
@@ -106,7 +135,10 @@ Organized by technology category (`arcgis-maps-sdk-js/`, future: `calcite-design
 ## Behaviour rules (apply to all agents)
 
 ### This is a docs-only repo
-No build, no install, no tests. All changes are markdown files. Don't suggest adding tooling unless explicitly asked.
+No build, no CI, no tests. All changes are markdown files. The only exception is `doctoc` (dev dependency) for maintaining tables of contents — don't suggest adding other tooling unless explicitly asked.
+
+### Keep tables of contents up to date
+Run `npm run toc` after modifying any markdown file that has a doctoc block (files with many headings). Files with fewer than ~6 headings have `<!-- DOCTOC SKIP -->` and should be left as-is.
 
 ### Keep the shared context pattern consistent
 Every skill must have both `prompt.md` (canonical content) and `README.md` (per-agent install guide). Every new agent needs a `README.md` in `agents/<name>/`. When adding either, update the relevant index files (`skills/README.md`, `agents/README.md`, root `README.md`).

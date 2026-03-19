@@ -1,0 +1,10 @@
+{
+  "name": "ai-codings-agents-resources",
+  "private": true,
+  "scripts": {
+    "toc": "doctoc --github *.md guides/*.md agents/**/*.md skills/**/*.md"
+  },
+  "devDependencies": {
+    "doctoc": "^2.2.1"
+  }
+}

@@ -5,3 +5,4 @@
 # Claude Code local settings (personal tool permissions, not shared)
 .claude/settings.local.json
 
+node_modules/

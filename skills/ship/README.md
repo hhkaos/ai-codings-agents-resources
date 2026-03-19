@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # Skill: `ship`
 
 Stages changes, updates project documentation (CHANGELOG, TODO, SPEC), generates a commit message, and pushes — in one guided flow.

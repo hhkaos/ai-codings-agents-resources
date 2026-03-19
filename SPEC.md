@@ -1,8 +1,26 @@
+
 # ai-templates
 
 > A public, agent-agnostic collection of skills, templates, and guides for developers who code with AI agents.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Problem](#problem)
+- [What this is](#what-this-is)
+- [Core features (v1)](#core-features-v1)
+- [Key user flows](#key-user-flows)
+  - [Setting up an agent on a new project](#setting-up-an-agent-on-a-new-project)
+- [Out of scope (v1)](#out-of-scope-v1)
+- [Tech constraints](#tech-constraints)
+- [Success criteria](#success-criteria)
+- [Open questions](#open-questions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Problem
 

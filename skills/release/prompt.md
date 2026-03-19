@@ -1,4 +1,26 @@
+
 Follow these steps to create a new release:
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1. Review unreleased changes](#1-review-unreleased-changes)
+- [2. Suggest version number](#2-suggest-version-number)
+- [3. Update project documentation](#3-update-project-documentation)
+  - [CHANGELOG.md](#changelogmd)
+  - [Other documentation files](#other-documentation-files)
+  - [Version fields](#version-fields)
+- [4. Regenerate documentation](#4-regenerate-documentation)
+- [5. Run tests](#5-run-tests)
+- [6. Build assets](#6-build-assets)
+- [7. Stage, commit, and push](#7-stage-commit-and-push)
+- [8. Create git tag](#8-create-git-tag)
+- [9. Create GitHub Release](#9-create-github-release)
+- [10. Clean up](#10-clean-up)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 1. Review unreleased changes
 

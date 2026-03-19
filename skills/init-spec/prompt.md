@@ -1,3 +1,4 @@
+
 Interview me to create a `SPEC.md` for this project.
 
 Before starting:
@@ -6,6 +7,16 @@ Before starting:
 Ask each question one at a time. Wait for my answer before moving to the next. If I say "skip" or "don't know yet", write it as `_TBD_` and move on.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Questions](#questions)
+- [Output](#output)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Questions
 

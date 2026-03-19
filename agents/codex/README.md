@@ -1,8 +1,21 @@
+
 # OpenAI Codex CLI Setup Guide
 
 OpenAI Codex CLI reads project context from `AGENTS.md` at the root of your repo. It does not support slash commands — skills are embedded as named prompt sections and triggered manually.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Project context file: `AGENTS.md`](#project-context-file-agentsmd)
+- [Skills (manual prompt recipes)](#skills-manual-prompt-recipes)
+- [Available skills](#available-skills)
+- [Tips](#tips)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Project context file: `AGENTS.md`
 

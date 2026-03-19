@@ -1,3 +1,4 @@
+
 # Skill: `init-memory`
 
 Interactively gathers project information and generates AI context files tailored to the agent(s) your team uses.
@@ -11,6 +12,16 @@ Interactively gathers project information and generates AI context files tailore
 **When to use it:** At the start of a new project, or when onboarding an AI agent to an existing one.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Install](#install)
+  - [Agent-specific notes](#agent-specific-notes)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Install
 

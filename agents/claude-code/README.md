@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # Claude Code Setup Guide
 
 [Claude Code](https://claude.ai/code) is Anthropic's AI coding CLI. It reads project context from `CLAUDE.md` and supports custom slash commands via `.claude/commands/`.

@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # ai-templates — Claude Code
 
 > A public, agent-agnostic collection of skills, templates, and guides for developers who code with AI agents.

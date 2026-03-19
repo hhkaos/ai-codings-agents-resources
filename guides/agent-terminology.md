@@ -1,8 +1,23 @@
+
 # Agent terminology guide
 
 Each AI coding agent uses different names for the same concepts. This guide maps the terms used in this repo to the equivalent in each agent, so you can apply any skill or template regardless of which tool you use.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Term mapping](#term-mapping)
+- [Concepts explained](#concepts-explained)
+  - [Skill](#skill)
+  - [Context file](#context-file)
+  - [Front matter](#front-matter)
+- [Convention used in this repo](#convention-used-in-this-repo)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Term mapping
 

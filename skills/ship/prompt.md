@@ -1,4 +1,23 @@
+
 Follow these steps to commit and push changes:
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1. Review changes](#1-review-changes)
+- [2. Update project documentation](#2-update-project-documentation)
+  - [CHANGELOG.md](#changelogmd)
+  - [TODO.md](#todomd)
+  - [SPEC.md](#specmd)
+- [3. Stage files](#3-stage-files)
+- [4. Generate a commit message](#4-generate-a-commit-message)
+- [5. Choose the git alias](#5-choose-the-git-alias)
+- [6. Commit](#6-commit)
+- [7. Push](#7-push)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 1. Review changes
 

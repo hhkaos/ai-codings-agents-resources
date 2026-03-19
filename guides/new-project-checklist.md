@@ -1,8 +1,33 @@
+
 # New Project Setup Checklist
 
 Use this checklist when starting a new project with AI coding agent support.
 
 > Not all steps apply to all projects — pick what makes sense. The core value is in: a good context file (`CLAUDE.md`/`AGENTS.md`), file-specific git staging, test gates, and AI commit tracking.
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Initial Setup](#initial-setup)
+  - [1. Repository Setup](#1-repository-setup)
+  - [2. Project Structure](#2-project-structure)
+  - [3. Git Configuration](#3-git-configuration)
+  - [4. Package Configuration](#4-package-configuration)
+  - [5. Git Hooks](#5-git-hooks)
+  - [6. Testing Setup](#6-testing-setup)
+  - [7. Documentation Structure](#7-documentation-structure)
+  - [8. CI/CD Setup](#8-cicd-setup)
+  - [9. CLAUDE.md Completion](#9-claudemd-completion)
+  - [10. Custom Skills Setup (Claude Code)](#10-custom-skills-setup-claude-code)
+- [Development Phase](#development-phase)
+  - [First Feature](#first-feature)
+  - [Security Review](#security-review)
+  - [Deployment Checklist](#deployment-checklist)
+- [Quick Reference](#quick-reference)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Initial Setup
 

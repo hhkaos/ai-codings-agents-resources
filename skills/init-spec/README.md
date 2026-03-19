@@ -1,3 +1,4 @@
+<!-- DOCTOC SKIP -->
 # Skill: `init-spec`
 
 Interviews you to create a `SPEC.md` from scratch — product purpose, users, core features, scope, constraints, and open questions.

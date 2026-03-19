@@ -1,3 +1,4 @@
+
 # Skills
 
 Reusable AI coding agent skills — slash commands, prompt recipes, or instruction snippets depending on the agent.
@@ -9,6 +10,23 @@ Each skill lives in its own folder and includes:
 > **Terminology note:** "Skills" is what this repo calls reusable prompt recipes — a neutral term. Each agent has its own name for the same concept: slash commands (Claude Code), prompt files (Copilot), agent rules (Cursor), or inline sections (Codex/AGENTS.md).
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Skills](#skills)
+  - [Available skills](#available-skills)
+  - [How to install a skill](#how-to-install-a-skill)
+    - [Claude Code](#claude-code)
+    - [GitHub Copilot](#github-copilot)
+    - [Cursor](#cursor)
+    - [OpenAI Codex](#openai-codex)
+    - [Gemini CLI](#gemini-cli)
+  - [Quick install via agent chat](#quick-install-via-agent-chat)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Available skills
 

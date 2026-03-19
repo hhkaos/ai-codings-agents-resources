@@ -1,8 +1,24 @@
+
 # Agents
 
 Per-agent setup guides, file templates, and the shared context pattern.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Agents](#agents)
+  - [The shared context pattern](#the-shared-context-pattern)
+    - [Minimal agent file example](#minimal-agent-file-example)
+    - [When to use this pattern](#when-to-use-this-pattern)
+    - [When a single agent file is fine](#when-a-single-agent-file-is-fine)
+  - [Templates](#templates)
+  - [Agent guides](#agent-guides)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## The shared context pattern
 

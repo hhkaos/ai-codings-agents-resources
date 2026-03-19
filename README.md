@@ -1,8 +1,25 @@
+
 # AI Coding Agent Templates
 
 A collection of reusable skills, templates, and guides for setting up AI coding agents on new or existing projects.
 
 Agent-agnostic: works with Claude Code, GitHub Copilot, OpenAI Codex, Cursor, Gemini CLI, and others. Each agent calls things differently — see the [terminology guide](guides/agent-terminology.md) if you're coming from a specific tool.
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [How to use this repo](#how-to-use-this-repo)
+- [What's in here](#whats-in-here)
+  - [`skills/`](#skills)
+  - [`agents/`](#agents)
+  - [`guides/`](#guides)
+  - [`examples/`](#examples)
+- [Status and quality](#status-and-quality)
+- [Contributing](#contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## How to use this repo
 

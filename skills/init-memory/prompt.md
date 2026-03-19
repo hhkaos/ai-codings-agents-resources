@@ -1,6 +1,29 @@
+
 Ask each group of questions one at a time — wait for the answer before moving to the next. If the user says "skip" or "not applicable", move on.
 
 ---
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Step 0 — Check for SPEC.md](#step-0--check-for-specmd)
+- [Step 0b — Identify target agent(s)](#step-0b--identify-target-agents)
+  - [File mapping per agent](#file-mapping-per-agent)
+- [Step 0c — Choose output mode](#step-0c--choose-output-mode)
+- [Step 1 — Project information](#step-1--project-information)
+- [Step 2 — Write the file(s)](#step-2--write-the-files)
+  - [Shared mode (PROJECT.md + minimal agent files)](#shared-mode-projectmd--minimal-agent-files)
+  - [Standalone mode (one full file per agent)](#standalone-mode-one-full-file-per-agent)
+  - [Preamble variants](#preamble-variants)
+  - [Interaction instructions block (add for non-Claude agents)](#interaction-instructions-block-add-for-non-claude-agents)
+- [Step 3 — Output structure](#step-3--output-structure)
+  - [PROJECT.md structure (shared mode only)](#projectmd-structure-shared-mode-only)
+  - [Minimal agent file structure (shared mode only)](#minimal-agent-file-structure-shared-mode-only)
+  - [Standalone agent file structure (standalone mode only)](#standalone-agent-file-structure-standalone-mode-only)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Step 0 — Check for SPEC.md
 
