@@ -1,0 +1,7 @@
+
+# macOS
+.DS_Store
+
+# Claude Code local settings (personal tool permissions, not shared)
+.claude/settings.local.json
+

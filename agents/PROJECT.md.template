@@ -1,0 +1,106 @@
+# [Project Name]
+
+> [One-sentence description: what it does and who it is for.]
+
+This file is the shared AI context for this project. It is read by all AI coding agents.
+Agent-specific behaviour rules live in each agent's own file (CLAUDE.md, AGENTS.md, copilot-instructions.md, etc.) and reference this file.
+
+---
+
+## What this project is
+
+[2–4 sentences: purpose, users, output. Be specific about whether it is read-only, interactive, etc.]
+
+---
+
+## Commands
+
+```bash
+# Install
+[install command]
+
+# Dev (include ports)
+[dev command]        # http://localhost:PORT
+
+# Test
+[test command]
+
+# Lint
+[lint command]
+
+# Build
+[build command]
+```
+
+---
+
+## Stack
+
+| Concern | Choice |
+|---|---|
+| Language | [value] |
+| Bundler | [value] |
+| Framework | [value] |
+| Key libraries | [value] |
+| Deployment | [value] |
+
+---
+
+## Architecture
+
+[Describe the top-level structure: apps, modules, roles. Include a directory tree if helpful.]
+
+```
+project/
+├── [file or folder]    # [role]
+└── [file or folder]    # [role]
+```
+
+### Data flow
+
+[Step 1] → [Step 2] → [Step 3]
+
+---
+
+## Coding style
+
+- [Rule 1]
+- [Rule 2]
+- [Rule 3]
+
+---
+
+## Constraints
+
+- [What this project does NOT do]
+
+---
+
+## What to avoid
+
+- [Anti-pattern or banned import]
+- [Mistake made before — why it's banned]
+
+---
+
+## Git conventions
+
+- Commit style: [e.g. conventional commits — `feat:`, `fix:`, `docs:`]
+- Human commits: `git ch "message"`
+- AI commits: `git cai "message"`
+- Never: `git add -A` or `git add .` — stage files by name only
+- Never commit: `*.pem`, `*.key`, `.env`, credentials
+
+---
+
+## Deployment
+
+[Platform, URL structure, base path config, CI/CD trigger.]
+
+---
+
+## Known issues / differences
+
+| Feature | Context A | Context B | Notes |
+|---|---|---|---|
+| [feature] | [behaviour] | [behaviour] | [notes] |

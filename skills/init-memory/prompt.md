@@ -1,6 +1,6 @@
 ---
-name: init-claude-md
-description: Interactively gather project information and generate AI context files (CLAUDE.md, AGENTS.md, .cursorrules, copilot-instructions.md, etc.) tailored to the AI coding agent(s) used in the project. Reads SPEC.md first if present to pre-fill answers and skip redundant questions.
+name: init-memory
+description: Interactively gather project information and generate AI context files (PROJECT.md, CLAUDE.md, AGENTS.md, copilot-instructions.md, etc.) tailored to the AI coding agent(s) used in the project. Reads SPEC.md first if present to pre-fill answers and skip redundant questions.
 ---
 
 This skill runs inside Claude Code, so the AskUserQuestion tool is available throughout.
@@ -22,10 +22,10 @@ Before asking anything else:
 
 3. **If SPEC.md does not exist:**
    - Ask: "There's no SPEC.md in this project. A spec is the authoritative source for requirements and saves time when generating context files. Would you like to:
-     a) Run `/review-spec` first to create one (recommended — it will make this interview much shorter)
+     a) Run `/init-spec` first to create one (recommended — it will make this interview much shorter)
      b) Continue without a spec (I'll ask all questions manually)
      c) Create a minimal SPEC.md stub now based on what you tell me during this interview"
-   - If the user chooses (a): stop and tell them to run `/review-spec`, then re-run `/init-claude-md` after.
+   - If the user chooses (a): stop and tell them to run `/init-spec`, then re-run `/init-memory` after.
    - If the user chooses (c): after completing Step 1, write a minimal SPEC.md from the answers before writing the agent context file(s).
    - If the user chooses (b): proceed with all questions.
 
@@ -65,6 +65,21 @@ Use the answer to determine:
 | Other | Ask the user for the correct file name/location | |
 
 If multiple agents are selected, all corresponding files will be written. Content will be the same but formatted and named per agent convention.
+
+## Step 0c — Choose output mode
+
+Ask next:
+
+> "How do you want the context files structured?
+>
+> **a) Shared `PROJECT.md` + minimal agent files** _(recommended for multiple agents)_
+> A single `PROJECT.md` holds all project context. Each agent file just references it and adds only agent-specific behaviour rules. One place to update when the project evolves.
+>
+> **b) Standalone file per agent**
+> Each agent gets a full, self-contained context file. Simpler when only one agent is used, but content must be kept in sync across files if you add more agents later."
+
+- If only one agent was selected: default to (b) but mention (a) as an option.
+- Store the choice as **shared mode** or **standalone mode** — it affects Step 2 and Step 3.
 
 ---
 
@@ -113,9 +128,19 @@ Ask the following question groups in order:
 
 ## Step 2 — Write the file(s)
 
-Write one file per agent selected. Use the structure below for all files — the content is identical but:
+### Shared mode (PROJECT.md + minimal agent files)
 
-- **File name/location** follows the mapping in Step 0
+1. Write `PROJECT.md` first using the **PROJECT.md structure** in Step 3. This file contains all project context and is agent-agnostic.
+2. For each agent selected, write a minimal file using the **Minimal agent file structure** in Step 3. These files only contain:
+   - A one-line pointer to `PROJECT.md`
+   - Agent-specific behaviour rules (Closing the loop, Ask before destructive actions, interaction instructions, etc.)
+   - Nothing that duplicates what is already in `PROJECT.md`
+
+### Standalone mode (one full file per agent)
+
+Write one file per agent selected. The content is identical across agents but:
+
+- **File name/location** follows the mapping in Step 0b
 - **Preamble line** is adapted per agent (see variants below)
 - **Interaction instructions** are added for agents that lack tool support for interactive questioning
 
@@ -157,7 +182,153 @@ For agents without native tool support for interactive questioning (Copilot, Cur
 
 ## Step 3 — Output structure
 
-Use this structure for every file. Omit sections the user said are not applicable — **except "Closing the loop", which is always written verbatim**. Never invent or assume details. Write in direct, imperative language.
+Never invent or assume details. Write in direct, imperative language.
+
+### PROJECT.md structure (shared mode only)
+
+Used when the user chose shared mode. Contains all project context — no agent-specific behaviour rules.
+
+```
+# [Project Name]
+
+> [One-sentence description: what it does and who it is for.]
+
+This file is the shared AI context for this project. It is read by all AI coding agents.
+Agent-specific behaviour rules live in each agent's own file (CLAUDE.md, AGENTS.md, copilot-instructions.md, etc.).
+
+---
+
+## What this project is
+
+[2–4 sentences: purpose, users, output, read-only vs interactive.]
+
+---
+
+## Commands
+
+\`\`\`bash
+[install]
+[dev — include port]
+[test]
+[lint]
+[build]
+\`\`\`
+
+---
+
+## Stack
+
+| Concern | Choice |
+|---|---|
+| Language | [value] |
+| Bundler | [value] |
+| [Other] | [value] |
+
+---
+
+## File map
+
+\`\`\`
+[Annotated directory tree.]
+\`\`\`
+
+---
+
+## Architecture
+
+[Modules/apps, roles, data persistence.]
+
+### Data flow (if non-obvious)
+
+[Step 1] → [Step 2] → [Step 3]
+
+---
+
+## Coding style
+
+[User's coding style rules.]
+
+---
+
+## Constraints
+
+- [What this project does NOT do]
+
+---
+
+## Key technical patterns
+
+[API patterns, import conventions, SDK quirks — grouped by library/concern.]
+
+---
+
+## What to avoid
+
+- [Anti-pattern 1]
+- [Anti-pattern 2]
+
+---
+
+## Known issues / differences
+
+| Feature | Context A | Context B | Notes |
+|---|---|---|---|
+| [feature] | [behaviour] | [behaviour] | [notes] |
+
+---
+
+## Deployment
+
+[Platform, URLs, base path, CI/CD, build process.]
+
+---
+
+## Git conventions
+
+[Conventional commits, AI/human commit helpers, custom skills/commands, docs to update when shipping, security/staging rules.]
+```
+
+---
+
+### Minimal agent file structure (shared mode only)
+
+Used for each agent file when the user chose shared mode. Contains only what is specific to that agent.
+
+```
+# [Project Name] — [Agent Name]
+
+> [One-sentence description.]
+
+[Preamble line — agent-specific]
+
+Read `PROJECT.md` for full project context: stack, architecture, commands, coding style, git conventions, and security rules.
+
+---
+
+## Behaviour rules
+
+[Only agent-specific behaviour rules. Do NOT repeat anything already in PROJECT.md.]
+
+[Add the interaction instructions block for non-Claude agents.]
+
+### Ask before destructive actions
+Confirm before: deleting files, force-pushing, resetting git state, dropping packages.
+
+### Keep responses concise
+Prefer showing changed code over explaining it. Use markdown link syntax for file references.
+
+---
+
+## Closing the loop (always follow these — non-negotiable)
+
+[Same closing the loop section — always written verbatim, in every agent file.]
+```
+
+---
+
+### Standalone agent file structure (standalone mode only)
+
+Use this structure for every file. Omit sections the user said are not applicable — **except "Closing the loop", which is always written verbatim**.
 
 ```
 # [Project Name]
@@ -322,3 +493,6 @@ Correct it immediately. Do not continue working around a known inaccuracy in the
 ---
 
 After writing all files, list the paths written and ask the user if they want to adjust or expand any section.
+
+In shared mode, remind the user:
+> "Keep `PROJECT.md` as your single source of truth for project context. When the project evolves (new stack, architecture change, new gotcha), update `PROJECT.md` — not the individual agent files."
