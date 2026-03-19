@@ -51,6 +51,7 @@ ai-templates/
 │   └── codex/
 │       └── README.md
 ├── guides/
+│   ├── agent-terminology.md            # Term mapping across agents (skills, context files, front matter)
 │   └── new-project-checklist.md        # Step-by-step new project setup
 └── examples/
     └── arcgis-maps-sdk-js/

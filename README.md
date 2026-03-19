@@ -2,7 +2,7 @@
 
 A collection of reusable skills, templates, and guides for setting up AI coding agents on new or existing projects.
 
-Primarily built around **Claude Code**, with support for **GitHub Copilot** and **OpenAI Codex**, and designed to be extended to other agents (Cursor, Gemini CLI, Windsurf, etc.).
+Agent-agnostic: works with Claude Code, GitHub Copilot, OpenAI Codex, Cursor, Gemini CLI, and others. Each agent calls things differently — see the [terminology guide](guides/agent-terminology.md) if you're coming from a specific tool.
 
 ## How to use this repo
 
@@ -35,6 +35,7 @@ Agent-agnostic workflow documentation — lessons learned, patterns, and checkli
 
 | Guide | What it covers |
 |---|---|
+| [Agent terminology](guides/agent-terminology.md) | How terms map across agents — skills, context files, front matter, invocation |
 | [New project checklist](guides/new-project-checklist.md) | Step-by-step setup for a new project with AI agent support |
 | [Workflow patterns](guides/workflow-patterns.md) | Reusable patterns: git conventions, monorepo setup, CI/CD, security, i18n |
 
@@ -44,6 +45,14 @@ Real-world context file examples from actual projects.
 | Example | Description |
 |---|---|
 | [ArcGIS mapping app](examples/arcgis-mapping/) | CLAUDE.md for a Vite + @arcgis/core v5 + Calcite project |
+
+---
+
+## Status and quality
+
+Most of the content in this repo was written by an AI coding agent based on instructions and decisions made by the author. Not everything has been manually reviewed, so there may be errors, inconsistencies, or instructions that don't work as described.
+
+If you find something wrong or confusing, please [open an issue](https://github.com/hhkaos/ai-codings-agents-resources/issues) — contributions and corrections are welcome.
 
 ---
 
