@@ -1,0 +1,119 @@
+# CLAUDE.md Template
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+[Brief description of what this project does, who it's for, and the key value proposition. Include the core technical approach if it's distinctive.]
+
+**Key Pattern**: Lead with purpose, then technical approach. Example:
+- "X System — a [technical approach] for [user group]. [Users] can [action] while [key benefit]. [Deployment model]."
+
+## Commands
+
+```bash
+# Installation
+[root install commands]
+[app-specific installs if monorepo]
+
+# Development
+[dev server commands with ports]
+
+# Tests
+[test commands - root and per-app]
+[watch mode if available]
+
+# Lint
+[linting commands]
+
+# Build
+[build commands with output locations]
+```
+
+**Pattern Notes**:
+- Always include ports for dev servers
+- Show both root-level and app-specific commands for monorepos
+- Include watch mode commands if available
+- Note any pre-commit/pre-push hooks (e.g., "Husky pre-push hook runs...")
+
+## Architecture
+
+### [Main Architecture Pattern]
+
+**Structure Pattern**:
+- List each major app/module with clear role description
+- Include tech stack for each (React version, build tool, key libraries)
+- Explain cryptographic/security model if relevant
+- Note what's shared vs. isolated between modules
+
+**Key Documentation Elements**:
+- Brief description of each app/module
+- Tech stack specifics (versions matter!)
+- Security/crypto approach if applicable
+- Data persistence model (browser-only, backend, static files, etc.)
+
+### Data Flow
+
+```
+[Step 1] → [Step 2] → [Step 3] →
+[Step 4] → [Step 5] → [Step 6]
+```
+
+**Pattern**: Use arrows to show the complete user journey from input to output. Include all actors (user roles).
+
+### Key Technical Details
+
+**Categories to cover**:
+- **Crypto/Security**: Libraries, algorithms, key formats, token structure
+- **Data Storage**: Where data lives, formats, schemas
+- **i18n**: Supported languages, library used, file structure
+- **UI Structure**: Main views/tabs/pages
+- **Data Import**: Formats, validation rules, date formats
+- **Configuration**: Config files, what they control, where they live
+
+### Deployment [Platform]
+
+**Include**:
+- Target platform (GitHub Pages, Vercel, AWS, etc.)
+- URL structure (subpaths, domains)
+- Base path configuration for routers
+- CI/CD workflow (when tests run, deployment triggers)
+- Multi-app build process if applicable
+
+## Git Conventions
+
+**Conventional Commits**:
+- `feat:` — New features
+- `fix:` — Bug fixes
+- `docs:` — Documentation changes
+- `refactor:` — Code refactoring
+- `test:` — Test additions/changes
+- `chore:` — Build process, dependencies, etc.
+
+**AI vs. Human Commits** (if tracking):
+- AI commits: `git cai "message"` (prefixes "AI: ", sets AI author)
+- Human commits: `git ch "message"`
+
+**Custom Skills** (if using):
+- `/ship` — [what it does, what it updates]
+- `/release` — [what it does, versioning approach]
+- [other custom skills]
+
+**Documentation Maintenance Rules**:
+- When shipping, update: [list files like CHANGELOG.md, TODO.md, SPEC.md]
+- If [condition], run [command] and include generated files
+- [other documentation rules]
+
+**Security Rules**:
+- Never commit: [list sensitive patterns like *.pem, private keys, real data]
+- Staging policy: Stage files by name — never `git add -A` or `git add .`
+
+## [Project-Specific Sections]
+
+Add any additional sections relevant to your project:
+- API documentation
+- Database schemas
+- Environment setup
+- Deployment procedures
+- Testing strategies
+- Code organization principles
