@@ -1,0 +1,23 @@
+#!/bin/sh
+# Check for broken relative links in staged markdown files
+
+staged_md=$(git diff --cached --name-only --diff-filter=ACM | grep '\.md$' | grep -v '^node_modules/')
+
+if [ -z "$staged_md" ]; then
+  exit 0
+fi
+
+echo "Checking markdown links..."
+failed=0
+
+for file in $staged_md; do
+  if ! npx markdown-link-check --config .markdown-link-check.json --quiet "$file"; then
+    failed=1
+  fi
+done
+
+if [ "$failed" -ne 0 ]; then
+  echo ""
+  echo "Broken links found. Fix them before committing."
+  exit 1
+fi

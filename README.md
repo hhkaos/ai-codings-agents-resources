@@ -54,14 +54,13 @@ Agent-agnostic workflow documentation — lessons learned, patterns, and checkli
 |---|---|
 | [Agent terminology](guides/agent-terminology.md) | How terms map across agents — skills, context files, front matter, invocation |
 | [New project checklist](guides/new-project-checklist.md) | Step-by-step setup for a new project with AI agent support |
-| [Workflow patterns](guides/workflow-patterns.md) | Reusable patterns: git conventions, monorepo setup, CI/CD, security, i18n |
 
 ### [`examples/`](examples/)
 Real-world context file examples from actual projects.
 
 | Example | Description |
 |---|---|
-| [ArcGIS mapping app](examples/arcgis-mapping/) | CLAUDE.md for a Vite + @arcgis/core v5 + Calcite project |
+| [ArcGIS mapping app](examples/arcgis-maps-sdk-js/) | CLAUDE.md for a Vite + @arcgis/core v5 + Calcite project |
 
 ---
 

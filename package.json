@@ -2,9 +2,12 @@
   "name": "ai-codings-agents-resources",
   "private": true,
   "scripts": {
-    "toc": "doctoc --github *.md guides/*.md agents/**/*.md skills/**/*.md"
+    "toc": "doctoc --github *.md guides/*.md agents/**/*.md skills/**/*.md",
+    "check-links": "find . -name '*.md' -not -path './node_modules/*' | xargs -I{} npx markdown-link-check --config .markdown-link-check.json --quiet {}",
+    "prepare": "git config core.hooksPath .githooks"
   },
   "devDependencies": {
-    "doctoc": "^2.2.1"
+    "doctoc": "^2.2.1",
+    "markdown-link-check": "^3.14.2"
   }
 }
