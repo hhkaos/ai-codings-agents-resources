@@ -66,8 +66,8 @@ ai-templates/
 
 ### Skills
 Each skill lives in `skills/<name>/` and has two files:
-- `prompt.md` — the canonical content in Claude Code front matter format
-- `README.md` — per-agent install table (file location, front matter, invocation)
+- `prompt.md` — the canonical content, agent-agnostic and without front matter
+- `README.md` — what the skill does and any customisation notes; install instructions are in `skills/README.md`
 
 Skills are native slash commands in Claude Code (`.claude/commands/`), prompt files in Copilot (`.github/prompts/`), rules in Cursor, and manual prompt sections in Codex/AGENTS.md.
 

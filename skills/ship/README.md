@@ -16,83 +16,15 @@ Stages changes, updates project documentation (CHANGELOG, TODO, SPEC), generates
 
 ---
 
-## Install per agent
+## Install
 
-### Claude Code (native slash command)
+→ See [How to install a skill](../README.md#how-to-install-a-skill) for per-agent file paths, front matter, and the quick-install prompt.
 
-Copy `prompt.md` to your project:
+**Suggested description for front matter:**
+> Stage changes, update CHANGELOG/TODO/SPEC, generate a commit message, and push in one guided flow.
 
-```
-.claude/commands/ship.md
-```
+### Customising for your project
 
-Invoke with `/ship` in any Claude Code session.
-
-**Front matter required:**
-```yaml
----
-name: ship
-description: Stage changes, generate a commit message, commit using a git alias, and push
-disable-model-invocation: true
----
-```
-
----
-
-### GitHub Copilot (prompt file)
-
-```
-.github/prompts/ship.prompt.md
-```
-
-**Front matter required:**
-```yaml
----
-mode: agent
-description: Stage changes, update CHANGELOG/TODO/SPEC, commit, and push in one guided flow.
----
-```
-
-Invoke with `/ship` in Copilot Chat.
-
----
-
-### Cursor
-
-```
-.cursor/rules/ship.mdc
-```
-
-**Front matter required:**
-```yaml
----
-description: How to stage, commit and push changes when asked to ship
-globs:
-alwaysApply: false
----
-```
-
-Trigger by saying _"ship these changes"_ or _"run /ship"_ in Cursor Chat.
-
----
-
-### OpenAI Codex / AGENTS.md
-
-Add as a named section in `AGENTS.md`:
-
-```markdown
-## Prompt: Ship changes
-
-When asked to "ship" or commit and push:
-
-[paste prompt.md content here, minus the front matter]
-```
-
----
-
-## Customising for your project
-
-The skill checks CLAUDE.md for the doc file paths your project uses (`TODO.md` vs `docs/TODO.md`, etc.). Make sure your CLAUDE.md documents:
-- Where `CHANGELOG.md` lives
-- Where `TODO.md` and `SPEC.md` live
+The skill checks the project's context file (CLAUDE.md, AGENTS.md, or equivalent) for doc file paths. Make sure yours documents:
+- Where `CHANGELOG.md`, `TODO.md`, and `SPEC.md` live
 - Any per-module scoping conventions for CHANGELOG entries (e.g. `App1:`, `App2:`)

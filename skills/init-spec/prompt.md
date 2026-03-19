@@ -1,9 +1,3 @@
----
-name: init-spec
-description: Interview the user to create a SPEC.md from scratch — product purpose, users, features, scope, constraints, and open questions.
-disable-model-invocation: true
----
-
 Interview me to create a `SPEC.md` for this project.
 
 Before starting:

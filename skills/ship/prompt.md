@@ -1,9 +1,3 @@
----
-name: ship
-description: Stage changes, generate a commit message, commit using a git alias, and push
-disable-model-invocation: true
----
-
 Follow these steps to commit and push changes:
 
 ## 1. Review changes

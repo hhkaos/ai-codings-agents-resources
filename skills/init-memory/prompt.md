@@ -1,9 +1,3 @@
----
-name: init-memory
-description: Interactively gather project information and generate AI context files (PROJECT.md, CLAUDE.md, AGENTS.md, copilot-instructions.md, etc.) tailored to the AI coding agent(s) used in the project. Reads SPEC.md first if present to pre-fill answers and skip redundant questions.
----
-
-This skill runs inside Claude Code, so the AskUserQuestion tool is available throughout.
 Ask each group of questions one at a time — wait for the answer before moving to the next. If the user says "skip" or "not applicable", move on.
 
 ---
@@ -64,22 +58,22 @@ Use the answer to determine:
 | Aider | `.aider.conf.yml` + conventions note | YAML config + context in chat |
 | Other | Ask the user for the correct file name/location | |
 
-If multiple agents are selected, all corresponding files will be written. Content will be the same but formatted and named per agent convention.
-
 ## Step 0c — Choose output mode
 
-Ask next:
+Before asking, check:
 
-> "How do you want the context files structured?
->
-> **a) Shared `PROJECT.md` + minimal agent files** _(recommended for multiple agents)_
-> A single `PROJECT.md` holds all project context. Each agent file just references it and adds only agent-specific behaviour rules. One place to update when the project evolves.
->
-> **b) Standalone file per agent**
-> Each agent gets a full, self-contained context file. Simpler when only one agent is used, but content must be kept in sync across files if you add more agents later."
+1. Use the Read tool to look for a `PROJECT.md` file in the current working directory.
 
-- If only one agent was selected: default to (b) but mention (a) as an option.
-- Store the choice as **shared mode** or **standalone mode** — it affects Step 2 and Step 3.
+2. **If `PROJECT.md` already exists:**
+   - Tell the user: "I found a `PROJECT.md` — this project already uses the shared context pattern. I'll write all agent context files as minimal files that reference `PROJECT.md`, and update `PROJECT.md` itself with any new information. Does that sound right, or would you prefer standalone files for each agent instead?"
+   - Store the choice as **shared mode** or **standalone mode** based on the user's answer.
+
+3. **If `PROJECT.md` does not exist:**
+   - Ask: "How do you want the context files structured?
+     - **a) Shared `PROJECT.md` + minimal agent files** _(recommended for multiple agents)_ — a single `PROJECT.md` holds all project context; each agent file just references it and adds only agent-specific behaviour rules. One place to update when the project evolves.
+     - **b) Standalone file per agent** — each agent gets a full, self-contained context file. Simpler when only one agent is used, but content must be kept in sync if you add more agents later."
+   - If only one agent was selected in Step 0b: suggest (b) but mention (a) as an option.
+   - Store the choice as **shared mode** or **standalone mode** — it affects Step 2 and Step 3.
 
 ---
 
