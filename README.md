@@ -37,6 +37,7 @@ Reusable slash commands / prompt recipes for AI coding agents. Each skill has in
 | [`init-spec`](skills/init-spec/) | Creates `SPEC.md` from scratch by interviewing you about the product |
 | [`review-spec`](skills/review-spec/) | Interviews you about your existing `SPEC.md` and updates it |
 | [`init-memory`](skills/init-memory/) | Interactively generates AI context files (CLAUDE.md, AGENTS.md, copilot-instructions.md, etc.) for your project |
+| [`init-knowhow`](skills/init-knowhow/) | Reorganizes an existing project's agent guidance into a self-maintaining know-how system that grows with each session |
 
 ### [`agents/`](agents/)
 Per-agent setup guides and file templates.

@@ -35,6 +35,7 @@ Each skill lives in its own folder and includes:
 | [`init-spec`](init-spec/) | Creates `SPEC.md` from scratch by interviewing you |
 | [`review-spec`](review-spec/) | Interviews you about your existing spec and updates it |
 | [`init-memory`](init-memory/) | Interactively generates AI context files for your project |
+| [`init-knowhow`](init-knowhow/) | Reorganizes existing agent guidance into a self-maintaining know-how system |
 | [`ship`](ship/) | Stage changes, update CHANGELOG/TODO/SPEC, commit, and push |
 | [`release`](release/) | Version bump, CHANGELOG update, git tag, and GitHub Release |
 

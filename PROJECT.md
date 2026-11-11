@@ -65,6 +65,9 @@ ai-templates/
 │   ├── init-memory/                    # Generates PROJECT.md + agent context files
 │   │   ├── prompt.md
 │   │   └── README.md
+│   ├── init-knowhow/                   # Reorganizes guidance into a self-maintaining know-how system
+│   │   ├── prompt.md
+│   │   └── README.md
 │   └── ship/                           # Commit + push with doc updates
 │       ├── prompt.md
 │       └── README.md
